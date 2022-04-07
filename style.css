@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* General CSS*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+h1 {
+  font-weight: bold;
+}
+
+strong {
+  font-size: 150%;
+}
+
+.d-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.d-flex-center {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.d-flex-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*###MARGIN CSS###########################*/
+.m-0 {
+  margin: 0 !important;
+}
+
+/*###RESPONSIVE COL#######################*/
+.row {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.row::after {
+  /*clearfix*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*###OVERALL CONTENT CSS######################*/
+.content-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1rem;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .content-wrapper {
+    padding: 1rem 5rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/*###TABLE CSS######################*/
+table {
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: white;
+}
+
+tfoot {
+  /* margin-top: 5px; */
+  border-top: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+tfoot > tr > td {
+  padding: 5px 5px;
+}
+
+th,
+td {
+  height: 2rem;
+  padding: 0 1rem;
+  width: 11.11%;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+td:nth-child(1) {
+  font-weight: bold;
+  color: white;
+}
+
+.table-wrapper {
+  text-align: center;
+  width: 100%;
+  /* overflow-x: auto; */
+  margin: 2rem auto;
+}
+
+.table-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+/*MAKRED THE AVG SCORE TD*/
+.marked > span {
+  display: none;
+}
+
+.marked::after {
+  content: "?";
+}
+
+/*###BTN INSIDE TABLE CSS######################*/
+.table-button-wrapper {
+  padding: 5px 0;
+}
+
+.table-button-wrapper > div > button {
+  margin-bottom: 0;
+}
+
+/*###INPUT INSIDE TABLE CSS######################*/
+.input-wrapper {
+  border-radius: 15px;
+  width: 40%;
+  padding: 2rem;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+}
+
+.label {
+  height: 2rem;
+  position: relative;
+  top: 5px;
+  text-align: left;
+}
+
+.rounded-input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/*###BUTTON CSS######################*/
+.btn {
+  height: 35px;
+  padding: 0 2rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.btn-modal {
+  margin: auto 5px !important;
+}
+
+.btn-primary {
+  background-color: #0275d8;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-table:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
